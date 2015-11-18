@@ -1,0 +1,70 @@
+#include "Defs.h"
+
+
+template <class TYPE>
+class ListNode
+{
+public:
+	TYPE data = NULL;
+
+	ListNode(const TYPE& data) : data(data){}
+
+public:
+	ListNode<TYPE>* next = NULL;
+	
+};
+
+template <class TYPE>
+class MyLinkedList
+{
+public:
+	ListNode<TYPE>* start = NULL;
+
+
+	MyLinkedList(){}
+	
+
+	~MyLinkedList(){}
+
+	void PushBack(const TYPE& n)
+	{
+		ListNode<TYPE>* node = new ListNode<TYPE>(n);
+
+		if (start == NULL)
+		{
+			start = node;
+			node->next = NULL;
+		}
+		else
+		{
+			ListNode<TYPE>* tmpIterator = start;
+			while (tmpIterator->next)
+			{
+				tmpIterator = tmpIterator->next;
+			}
+			tmpIterator->next = n;
+			n.next = NULL;
+		}
+	}
+	
+	int Size()const
+	{
+		ListNode<TYPE*>* tmpIterator = start;
+		int count;
+		while (tmpIterator)
+		{
+			count++;
+			tmpIterator = tmpIterator->next;
+		}
+	}
+
+	bool Empty()const
+	{
+	
+	}
+	void Clear()
+	{
+	
+	}
+
+};
