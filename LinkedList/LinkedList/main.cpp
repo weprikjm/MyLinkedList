@@ -10,8 +10,17 @@ int main(int argc, char** argv)
 	list.PushBack(4);
 	list.PushBack(5);
 
-	list.Size();
+	list.PushFront(1);
 
+	list.Insert(4,6);
+
+	list.Remove(6);
+
+
+	list.Size();
+	int n = NULL;
+
+	printf("%d", n);
 	list.Clear();
 
 	getchar();
