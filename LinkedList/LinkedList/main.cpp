@@ -16,6 +16,7 @@ int main(int argc, char** argv)
 
 	list.Remove(6);
 
+	ListNode<int>* lst = list[1];
 
 	list.Size();
 	int n = NULL;
